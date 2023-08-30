@@ -35,9 +35,9 @@ The synthetic signals $s$ (often called replica vectors or Green's functions) ar
 
 In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the travel time from a reference point (commonly center of array) and the sensor $j$ for a given plane-wave
 
-$\boldsymbol{t_j} = r_j \cdot u_{h}$,
+$\boldsymbol{t}_j = \boldsymbol{r}_j \cdot \boldsymbol{u}_{h}$,
 
-where $r_j = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $u_{hor} = u_{hor}(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_{hor}$ the horizontal slowness and $\Theta$ the direction of arrival. $u_{hor}$ and $\Theta$ are the parameters that are tested for. Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
+where $\boldsymbol{r}_j = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\boldsymbol{u}_{hor} = u_{hor}(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_{hor}$ the horizontal slowness and $\Theta$ the direction of arrival. $u_{hor}$ and $\Theta$ are the parameters that are tested for (or equivalently $u_x, u_y$). Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
 
 ### Matched field processing
 
@@ -45,9 +45,9 @@ When curved wavefronts are assumed instead, sources may be located within the se
 
 In MFP, the travel time is computed as
 
-$t_j = |\mathbf{r}_j - \mathbf{r}_s| / c$,
+$t_j = |\boldsymbol{r}_j - \boldsymbol{r}_s| / c$,
 
-with $|\mathbf{r}_j - \mathbf{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\mathbf{r}_s$ (1D, 2D, 3D) and, sometimes, the medium velocity $c$. A different name for MFP that is intuitive to seismologists may be curved-wave Beamforming.
+with $|\boldsymbol{r}_j - \boldsymbol{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\boldsymbol{r}_s$ (1D, 2D, 3D) and, sometimes, the medium velocity $c$. A different name for MFP that is intuitive to seismologists may be curved-wave Beamforming.
 
 The beamforming done is the notebooks here is Matched Field Processing.
 
