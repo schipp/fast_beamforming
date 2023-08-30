@@ -15,11 +15,11 @@ We demonstrate this in the notebooks within this repository:
 
 ### What is beamforming?
 
-Beamforming is a phase-matching algorithm commonly used to estimate the direction of arrival and local phase velocity of a propagating wavefront. The most basic beamformer is the delay-and-sum beamformer, where recordings across an array of sensors are phase-shifted and summed (forming the beam) to test for the best beam, corresponding to best direction of arrival and velocity.
+Beamforming is a phase-matching algorithm commonly used to estimate the origin and local phase velocity of a propagating wavefront. The most basic beamformer is the delay-and-sum beamformer, where recordings across an array of sensors are phase-shifted and summed (forming the beam) to test for the best beam, corresponding to best origin and velocity (Rost and Thomas, 2002).
 
 ### Cross-correlation beamforming
 
-The cross-correlation beamformer (also Bartlett beamformer, conventional beamformer, etc.) applies the same delay-and-sum idea to correlation functions between all sensor pairs. This has the major advantage that only the coherent part of the wavefield is taken into account. The major disadvantage is that the computation of cross correlations between all station pairs can become expensive fast, scaling with $n^2$.
+The cross-correlation beamformer (also Bartlett beamformer, conventional beamformer, etc.) applies the same delay-and-sum idea to correlation functions between all sensor pairs (Ruigrok et al. 2017). This has the major advantage that only the coherent part of the wavefield is taken into account. The major disadvantage is that the computation of cross correlations between all station pairs can become expensive fast, scaling with $n^2$.
 
 A few different formulation of this beamformer exist. We write it in frequency domain as
 
@@ -29,20 +29,30 @@ where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d_k^*(\omega)$ the cro
 
 The synthetic signals $s$ (often called replica vectors or Green's functions) are the expected wavefield for a chosen direction of arrival and velocity, most often in acoustic homogeneous half-space, $s_j = \exp(-i \omega t_j)$, where $t_j$ is the traveltime from source to each receiver $j$.
 
-### Matched field processing
+### Plane-wave beamforming
 
-How the Green's function $s_j$, or more precisely the expected traveltime $t_j$, is computed, determines whether seismologists call this algorithm plane-wave Beamforming or Matched Field Processing (MFP).
-
-In plane-wave beamforming $t_j$ is the travel time from a reference point (commonly center of array) and the sensor $j$ for a given plane-wave
+In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the travel time from a reference point (commonly center of array) and the sensor $j$ for a given plane-wave
 
 $t_j = \mathbf{r}_j \cdot \mathbf{u}_{hor}$,
 
-where $\mathbf{r}_j = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\mathbf{u}_{hor} = u_{hor}(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_{hor}$ the horizontal slowness and $\Theta$ the direction of arrival. $u_{hor}$ and $\Theta$ are the parameters that are tested for.
+where $\mathbf{r}_j = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\mathbf{u}_{hor} = u_{hor}(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_{hor}$ the horizontal slowness and $\Theta$ the direction of arrival. $u_{hor}$ and $\Theta$ are the parameters that are tested for. Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
+
+### Matched field processing
+
+When curved wavefronts are assumed instead, sources may be located within the sensor array and the grid that is tested is defined in space instead of the slowness-domain. This is called Matched Field Processing (e.g., Baggeroer et al. 1988). In practice, the difference between plane-wave beamforming and matched field processing lies in the computation of the Green's functions $s_j$, or more precisely the expected traveltimes $t_j$.
 
 In MFP, the travel time is computed as
 
 $t_j = |\mathbf{r}_j - \mathbf{r}_s| / c$,
 
-with $|\mathbf{r}_j - \mathbf{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\mathbf{r}_s$ (1D, 2D, 3D) and the medium velocity $c$. Inherently, this allows curved wavefronts and source within a senesor array. A different name for MFP could be curved-wave Beamforming.
+with $|\mathbf{r}_j - \mathbf{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\mathbf{r}_s$ (1D, 2D, 3D) and, sometimes, the medium velocity $c$. A different name for MFP that is intuitive to seismologists may be curved-wave Beamforming.
 
-In the notebooks here, I show examples of Matched Field Processing.
+The beamforming done is the notebooks here is Matched Field Processing.
+
+### References
+
+Rost, S. & Thomas, C., 2002. Array seismology: Methods and applications. *Reviews of Geophysics*, **40**, 2–1–2–27. doi:10.1029/2000RG000100
+
+Ruigrok, E., Gibbons, S. & Wapenaar, K., 2017. Cross-correlation beamforming. *J Seismol*, **21**, 495–508. doi:10.1007/s10950-016-9612-6
+
+Baggeroer, A.B., Kuperman, W.A. & Schmidt, H., 1988. Matched field processing: Source localization in correlated noise as an optimum parameter estimation problem. *The Journal of the Acoustical Society of America*, **83**, 571–587. doi:10.1121/1.396151
