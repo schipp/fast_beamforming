@@ -1,15 +1,15 @@
 # Fast beamforming in Python
 
-Cross-correlation beamforming can be realised in a few lines of Python matrix operations, making use of `pytorch` linear algebra optimisations for speed. For small problems (=smaller than memory), this is fast and efficient. For large problems, this approach fails, i.e., when the matrices containing cross correlation become too large for memory. To solve this, we employ `dask` to divide the computations into multiple tasks than can run across arbitrary infrastructure while retaining much the same syntax and logic.
+Cross-correlation beamforming can be realised in a few lines of Python matrix operations, making use of `pytorch` linear algebra optimisations for speed. For small problems (=smaller than memory), this is fast and efficient and fully parallel. For large problems, this approach fails, specifically when the matrices containing cross correlations become too large for memory. To solve this, we employ `dask` to divide the computations into multiple tasks than can run across arbitrary infrastructure while retaining much of the same syntax and logic.
 
 We demonstrate this in the notebooks within this repository:
 
-* `01_mfp_small.ipynb`: Matched Field Processing (2D) for a small problem (based on `pytorch`)
-* `02_mfp_big.ipynb`: Matched Field Processing (3D) for a big problem (based on `dask`)
+* `beamforming_pytorch.ipynb`: Beamforming for a small problem (based on `pytorch`)
+* `beamforming_dask.ipynb`: Beamforming for a big problem (based on `dask`)
 
 **Note on `dask`**
 
-`dask` allows to employ the same algorithm and largely the same syntax as the pytorch version, which means one doesn't have to worry about developing a different algorithm that is not memory-limited. However, `dask` also introduces a new optimisation problem: The choice of "good" chunks sizes for the specific system at hand. This is specific to the compute infrastructure used. On the bright side, this has to be optimized only once for a given problem-geometry (number of stations, grid points, frequencies).
+`dask` allows to employ the same algorithm and largely the same syntax as the `pytorch` version, which means one doesn't have to worry about developing a different algorithm that is not memory-limited. However, `dask` also introduces a new optimisation problem: The choice of "good" chunks sizes for the specific system at hand. This is specific to the compute infrastructure used. On the bright side, this has to be optimized only once for a given problem-geometry (number of stations, grid points, frequencies). Visit the [dask documentation](https://docs.dask.org/en/stable/understanding-performance.html) for more details.
 
 ## Background
 
@@ -25,7 +25,7 @@ A few different formulation of this beamformer exist. We write it in frequency d
 
 $B = \sum_\omega \sum_j \sum_{k\neq j} K_{jk}(\omega) S_{kj}(\omega),$
 
-where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d_k^*(\omega)$ the cross-spectral density matrix of recorded signals $d$, and $S_{kj}(\omega) = s_j(\omega) s_k^*(\omega)$ the cross-spectral density matrix of synthetic signals $s$. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, we cannot take the absolute, as is seen in similar formulations of this beamformer, because negative beampowers indicate anti-correlation in the formulation above.
+where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d_k^*(\omega)$ the cross-spectral density matrix of recorded signals $d$, $S_{kj}(\omega) = s_j(\omega) s_k^*(\omega)$ the cross-spectral density matrix of synthetic signals $s$, and $j$ and $k$ identify sensors. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, negative beampowers indicate anti-correlation.
 
 The synthetic signals $s$ (often called replica vectors or Green's functions) are the expected wavefield for a chosen direction of arrival and velocity, most often in acoustic homogeneous half-space, $s_j = \exp(-i \omega t_j)$, where $t_j$ is the traveltime from source to each receiver $j$.
 
