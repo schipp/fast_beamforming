@@ -29,7 +29,7 @@ $B = \sum_\omega \sum_j \sum_{k\neq j} K_{jk}(\omega) S_{kj}(\omega),$
 
 where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d^H_k(\omega)$ the cross-spectral density matrix of recorded signals $d$, $S_{kj}(\omega) = s_j(\omega) s^H_k(\omega)$ the cross-spectral density matrix of synthetic signals $s$, $j$ and $k$ identify sensors, and $H$ the complex conjugate. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, negative beampowers indicate anti-correlation.
 
-The synthetic signals $s$ (often called replica vectors or Green's functions) are the expected wavefield for a chosen direction of arrival and velocity, most often in acoustic homogeneous half-space, $s_j = \exp(-i \omega t_j)$, where $t_j$ is the traveltime from source to each receiver $j$.
+The synthetic signals $s$ (often called replica vectors or Green's functions) are the expected wavefield for a given source origin and medium velocity, most often in acoustic homogeneous half-space $s_j = \exp(-i \omega t_j)$, where $t_j$ is the traveltime from source to each receiver $j$.
 
 ### Plane-wave beamforming
 
@@ -37,7 +37,7 @@ In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In
 
 $t_j = \boldsymbol{r_j} \cdot \boldsymbol{u_h}$,
 
-where $\boldsymbol{r_j} = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\boldsymbol{u_h} = u_h(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_h$ the horizontal slowness and $\Theta$ the direction of arrival. $u_h$ and $\Theta$ are the parameters that are tested for (or equivalently $u_x, u_y$). Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
+where $\boldsymbol{r_j} = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\boldsymbol{u_h} = u_h(\sin(\theta), \cos(\theta))$ the horizontal slowness vector with $u_h$ the horizontal slowness and $\theta$ the direction of arrival. $u_h$ and $\theta$ are the parameters that are tested for (or equivalently $u_x, u_y$). Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
 
 ### Matched field processing
 
