@@ -37,7 +37,7 @@ In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In
 
 $t_j = r_j \cdot u_{hor}$,
 
-where $\mathbf{r}_j = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\mathbf{u}_{hor} = u_{hor}(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_{hor}$ the horizontal slowness and $\Theta$ the direction of arrival. $u_{hor}$ and $\Theta$ are the parameters that are tested for. Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
+where $r_j = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\vec{u}_{hor} = u_{hor}(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_{hor}$ the horizontal slowness and $\Theta$ the direction of arrival. $u_{hor}$ and $\Theta$ are the parameters that are tested for. Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
 
 ### Matched field processing
 
