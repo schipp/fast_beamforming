@@ -27,27 +27,27 @@ A few different formulation of this beamformer exist. We write it in frequency d
 
 $B = \sum_\omega \sum_j \sum_{k\neq j} K_{jk}(\omega) S_{kj}(\omega),$
 
-where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d^H_k(\omega)$ the cross-spectral density matrix of recorded signals $d$, $S_{kj}(\omega) = s_j(\omega) s^H_k(\omega)$ the cross-spectral density matrix of synthetic signals $s$, $j$ and $k$ identify sensors, and $H$ the complex conjugate. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, negative beampowers indicate anti-correlation.
+with $B$ the beampower, $K_{jk}(\omega) = d_j(\omega) d^H_k(\omega)$ the cross-spectral density matrix of recorded signals $d$, $S_{kj}(\omega) = s_j(\omega) s^H_k(\omega)$ the cross-spectral density matrix of synthetic signals $s$, $j$ and $k$ identify sensors, and $H$ the complex conjugate. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, negative beampowers indicate anti-correlation.
 
 The synthetic signals $s$ (often called replica vectors or Green's functions) are the expected wavefield for a given source origin and medium velocity, most often in acoustic homogeneous half-space $s_j = \exp(-i \omega t_j)$, where $t_j$ is the traveltime from source to each receiver $j$.
 
 ### Plane-wave beamforming
 
-In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the travel time from a reference point (commonly center of array) and the sensor $j$ for a given plane-wave
+In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the relative travel time from a reference point (commonly center of array) to the sensor $j$ for a given plane-wave
 
 $t_j = \boldsymbol{r_j} \cdot \boldsymbol{u_h}$,
 
-where $\boldsymbol{r_j} = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\boldsymbol{u_h} = u_h(\sin(\theta), \cos(\theta))$ the horizontal slowness vector with $u_h$ the horizontal slowness and $\theta$ the direction of arrival. $u_h$ and $\theta$ are the parameters that are tested for (or equivalently $u_x, u_y$). Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
+with $\boldsymbol{r_j} = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\boldsymbol{u_h} = u_h(\sin(\theta), \cos(\theta))$ the horizontal slowness vector of the plane-wave, with $u_h$ the horizontal slowness and $\theta$ the direction of arrival. $u_h$ and $\theta$ are the parameters that are tested for (or equivalently $u_x, u_y$). Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate. The advantage of this is that the spatial dimension is 1 (direction of arrival), which is cheap to compute.
 
 ### Matched field processing
 
-When curved wavefronts are assumed instead, sources may be located within the sensor array and the grid that is tested is defined in space instead of the slowness-domain. This is called Matched Field Processing (e.g., Baggeroer et al. 1988). In practice, the difference between plane-wave beamforming and matched field processing lies in the computation of the Green's functions $s_j$, or more precisely the expected traveltimes $t_j$.
+When curved wavefronts are allowed, sources may be located within the sensor array and the grid that is tested is defined in space instead of the slowness-domain, adding at least one extra dimension. This is called Matched Field Processing (e.g., Baggeroer et al. 1988). In practice, the difference between plane-wave beamforming and matched field processing lies in the computation of the Green's functions $s_j$, or more precisely the expected traveltimes $t_j$.
 
 In MFP, the travel time is computed as
 
 $t_j = |\boldsymbol{r}_j - \boldsymbol{r}_s| / c$,
 
-with $|\boldsymbol{r}_j - \boldsymbol{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\boldsymbol{r}_s$ (1D, 2D, 3D) and, sometimes, the medium velocity $c$. A different name for MFP that is intuitive to seismologists may be curved-wave Beamforming.
+with $|\boldsymbol{r}_j - \boldsymbol{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\boldsymbol{r}_s$ (2D, 3D) and, sometimes, the medium velocity $c$. A different name for MFP that is intuitive to seismologists may be curved-wave Beamforming.
 
 The beamforming done is the notebooks here is Matched Field Processing.
 
