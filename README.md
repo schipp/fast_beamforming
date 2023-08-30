@@ -35,7 +35,7 @@ The synthetic signals $s$ (often called replica vectors or Green's functions) ar
 
 In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the travel time from a reference point (commonly center of array) and the sensor $j$ for a given plane-wave
 
-$\boldsymbol{t_j} = \boldsymbol{r_j} \cdot \boldsymbol{u_h}$,
+$t_j = \boldsymbol{r_j} \cdot \boldsymbol{u_h}$,
 
 where $\boldsymbol{r_j} = (r_x, r_y)$ the coordinates of sensor $j$ relative to the reference point, and $\boldsymbol{u_h} = u_h(\sin(\Theta), \cos(\Theta))$ the horizontal slowness vector with $u_h$ the horizontal slowness and $\Theta$ the direction of arrival. $u_h$ and $\Theta$ are the parameters that are tested for (or equivalently $u_x, u_y$). Because plane waves are assumed, the source origin must be enough far away that the plane-wave assumption becomes adequate.
 
