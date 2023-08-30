@@ -27,7 +27,7 @@ A few different formulation of this beamformer exist. We write it in frequency d
 
 $B = \sum_\omega \sum_j \sum_{k\neq j} K_{jk}(\omega) S_{kj}(\omega),$
 
-where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d^*_k(\omega)$ the cross-spectral density matrix of recorded signals $ d $, $S_{kj}(\omega) = s_j(\omega) s_k^*(\omega)$ the cross-spectral density matrix of synthetic signals $s$, and $j$ and $k$ identify sensors. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, negative beampowers indicate anti-correlation.
+where $B$ is the beampower, $K_{jk}(\omega) = d_j(\omega) d^\*_k(\omega)$ the cross-spectral density matrix of recorded signals $d$, $S_{kj}(\omega) = s_j(\omega) s_k^*(\omega)$ the cross-spectral density matrix of synthetic signals $s$, and $j$ and $k$ identify sensors. We exclude auto-correlations $j=k$, because they contain no phase-information. Consequently, negative beampowers indicate anti-correlation.
 
 The synthetic signals $s$ (often called replica vectors or Green's functions) are the expected wavefield for a chosen direction of arrival and velocity, most often in acoustic homogeneous half-space, $s_j = \exp(-i \omega t_j)$, where $t_j$ is the traveltime from source to each receiver $j$.
 
