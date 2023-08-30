@@ -17,7 +17,7 @@ We demonstrate this in the notebooks within this repository:
 
 ### What is beamforming?
 
-Beamforming is a phase-matching algorithm commonly used to estimate the origin and local phase velocity of a propagating wavefront. The most basic beamformer is the delay-and-sum beamformer, where recordings across an array of sensors are phase-shifted and summed (forming the beam) to test for the best beam, corresponding to best origin and velocity (Rost and Thomas, 2002).
+Beamforming is a phase-matching algorithm commonly used to estimate the origin and local phase velocity of a wavefront propagating across an array of sensors. The most basic beamformer is the delay-and-sum beamformer, where recordings across the sensors are phase-shifted and summed (forming the beam) to test for the best-fitting source origin and medium velocity (Rost and Thomas, 2002).
 
 ### Cross-correlation beamforming
 
