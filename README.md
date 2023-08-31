@@ -49,7 +49,7 @@ $t_j = |\boldsymbol{r}_j - \boldsymbol{r}_s| / c$,
 
 with $|\boldsymbol{r}_j - \boldsymbol{r}_s|$ the euclidean distance between sensor and source and $c$ the medium velocity. The parameters tested for in MFP are the source position $\boldsymbol{r}_s$ (2D, 3D) and, sometimes, the medium velocity $c$. A different name for MFP that is intuitive to seismologists may be curved-wave Beamforming.
 
-The beamforming done is the notebooks here is Matched Field Processing.
+The beamforming in the notebooks here is Matched Field Processing.
 
 ### References
 
