@@ -4,10 +4,12 @@
 
 Cross-correlation beamforming can be realised in a few lines of Python matrix operations, making use of `pytorch` linear algebra optimisations for speed. For small problems (=smaller than memory), this is fast, efficient and fully parallel. For large problems, this approach fails, specifically when the matrices containing cross correlations become too large for memory. To solve this, we can employ `dask` to divide the computations automatically into multiple tasks than can run across arbitrary infrastructure while retaining much of the same syntax and logic.
 
-We demonstrate this in the notebooks within this repository:
+We demonstrate this with the notebooks in this repository:
 
-* `beamforming_pytorch.ipynb`: Beamforming for a small problem (based on `pytorch`)
-* `beamforming_dask.ipynb`: Beamforming for a big problem (based on `dask`)
+* `beamforming_slow.ipynb`: Beamforming of a small synthetic example (**SLOW** naive version for teaching purposes)
+* `beamforming_pytorch.ipynb`: Beamforming of a small synthetic example (based on `pytorch`)
+* `beamforming_pytorch_field_data.ipynb`: Beamforming of a small field data example (based on `pytorch`)
+* `beamforming_dask.ipynb`: Beamforming of a big synthetic example (based on `dask`)
 
 **Note on `dask`**
 
@@ -33,7 +35,7 @@ The synthetic signals $s$ (often called replica vectors or Green's functions) ar
 
 ### Plane-wave beamforming
 
-In seismology, "Beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the relative travel time from a reference point (commonly center of array) to the sensor $j$ for a given plane-wave
+In seismology, "beamforming" is often synonymous with plane-wave beamforming. In plane-wave beamforming $t_j$ is the relative travel time from a reference point (commonly center of array) to the sensor $j$ for a given plane-wave
 
 $t_j = \boldsymbol{r_j} \cdot \boldsymbol{u_h}$,
 
@@ -41,7 +43,7 @@ with $\boldsymbol{r_j} = (r_x, r_y)$ the coordinates of sensor $j$ relative to t
 
 ### Matched field processing
 
-When curved wavefronts are allowed, sources may be located within the sensor array and the grid that is tested is defined in space instead of the slowness-domain, adding at least one extra dimension. This is called Matched Field Processing (e.g., Baggeroer et al. 1988). In practice, the difference between plane-wave beamforming and matched field processing lies in the computation of the Green's functions $s_j$, or more precisely the expected traveltimes $t_j$.
+When curved wavefronts are allowed, sources may be located within the sensor array and the grid that is tested is defined in space instead of the slowness-domain, adding at least one extra dimension. This is called matched field processing (e.g., Baggeroer et al. 1988). In practice, the difference between plane-wave beamforming and matched field processing lies in the computation of the Green's functions $s_j$, or more precisely the expected traveltimes $t_j$.
 
 In MFP, the travel time is computed as
 
