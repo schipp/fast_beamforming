@@ -2,14 +2,14 @@
 
 ![beampowers](beampowers.png)
 
-Cross-correlation beamforming can be realised in a few lines of Python matrix operations, making use of `pytorch` linear algebra optimisations for speed. For small problems (=smaller than memory), this is fast, efficient and fully parallel. For large problems, this approach fails, specifically when the matrices containing cross correlations become too large for memory. To solve this, we can employ `dask` to divide the computations automatically into multiple tasks than can run across arbitrary infrastructure while retaining much of the same syntax and logic.
+Cross-correlation beamforming can be realised in a few lines of matrix operations in Python, making use of `pytorch` linear algebra optimisations for speed. For small problems (=smaller than memory), this is fast, efficient and fully parallel. For large problems, this approach fails, specifically when the matrices containing cross correlations become too large for memory. To solve this, we can employ `dask` to divide the computations automatically into multiple tasks than can run across arbitrary infrastructure while retaining much of the same syntax and logic.
 
 We demonstrate this with the notebooks in this repository:
 
-* `beamforming_slow.ipynb`: Beamforming of a small synthetic example (**SLOW** naive version for teaching purposes)
-* `beamforming_pytorch.ipynb`: Beamforming of a small synthetic example (based on `pytorch`)
-* `beamforming_pytorch_field_data.ipynb`: Beamforming of a small field data example (based on `pytorch`)
-* `beamforming_dask.ipynb`: Beamforming of a big synthetic example (based on `dask`)
+* `beamforming_slow.ipynb`: **SLOW** naive version for teaching purposes
+* `beamforming_pytorch.ipynb`: small synthetic example, based on `pytorch`
+* `beamforming_pytorch_field_data.ipynb`: small field data example, based on `pytorch`
+* `beamforming_dask.ipynb`: big synthetic example, based on `dask`
 
 **Note on `dask`**
 
