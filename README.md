@@ -6,7 +6,7 @@ Cross-correlation beamforming can be realised in a few lines of matrix operation
 
 We demonstrate this with the notebooks in this repository:
 
-* `beamforming_slow.ipynb`: **SLOW** naive version for teaching purposes
+* `beamforming_slow.ipynb`: small synthetic example, **SLOW** naive version for teaching purposes only
 * `beamforming_pytorch.ipynb`: small synthetic example, based on `pytorch`
 * `beamforming_pytorch_field_data.ipynb`: small field data example, based on `pytorch`
 * `beamforming_dask.ipynb`: big synthetic example, based on `dask`
