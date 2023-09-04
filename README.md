@@ -40,8 +40,11 @@ These are the runtimes of the cell that performs beamforming (under 3. Beamformi
 
 Other parameters: `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`, `sampling_rate = 10`, `fmin, fmax = 0.1, 1.0`
 
+## Performance in scientific computing
 
-## Note on `dask`
+This repository is also intended as a more general guide to teach students and researchers about the potential of a) making best use of the exisiting computing libraries for significant speed-up compared to naively written Python code and b) how much performance can be gained simply by moving from `numpy` to `pytorch`. Note that `pytorch` is significantly faster in the exampel of cross-correlation beamforming example, because large matrices are involved. Further note that all linear equation systems, no matter what physics they express in your specific context, can be written in matrix form, allowing to exploit the linear algebra optimisations developed in the machine learning community for your use-case.
+
+## Notes on `dask`
 
 `dask` allows to employ the same algorithm and largely the same syntax as the `pytorch` version, which means one doesn't have to worry about developing a different algorithm that is not memory-limited. However, `dask` also introduces a new optimisation problem: The choice of "good" chunks sizes for the specific system at hand. This is specific to the compute infrastructure used. On the bright side, this has to be optimized only once for a given problem-geometry (number of stations, grid points, frequencies). Visit the [dask documentation](https://docs.dask.org/en/stable/understanding-performance.html) for more details.
 
