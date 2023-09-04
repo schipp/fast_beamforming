@@ -90,3 +90,21 @@ Rost, S. & Thomas, C., 2002. Array seismology: Methods and applications. *Review
 Ruigrok, E., Gibbons, S. & Wapenaar, K., 2017. Cross-correlation beamforming. *J Seismol*, **21**, 495–508. doi:10.1007/s10950-016-9612-6
 
 Baggeroer, A.B., Kuperman, W.A. & Schmidt, H., 1988. Matched field processing: Source localization in correlated noise as an optimum parameter estimation problem. *The Journal of the Acoustical Society of America*, **83**, 571–587. doi:10.1121/1.396151
+
+### Requirements
+
+To run these notebooks, the following is required
+
+* Python
+* scientific Python stack (numpy, scipy, matplotlib)
+* notebook
+* [torch](https://pytorch.org)
+* [dask](https://www.dask.org)
+
+A functioning installation can be achieved, e.g., via conda by
+
+```bash
+>> conda create -n fast_beamforming python=3.11
+>> conda activate fast_beamforming
+>> conda install torch dask scipy matplotlib notebook
+```
