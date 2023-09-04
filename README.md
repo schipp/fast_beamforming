@@ -1,6 +1,6 @@
 # Fast beamforming in Python
 
-![beampowers](beampowers.png)
+<img align="left" src="beampowers.png" width="400px">
 
 Cross-correlation beamforming can be realised in a few lines of matrix operations in Python, making use of `pytorch` linear algebra optimisations for speed. For small problems (=smaller than memory), this is fast, efficient and fully parallel. For large problems, this approach fails, specifically when the matrices containing cross correlations become too large for memory. To solve this, we can employ `dask` to divide the computations automatically into multiple tasks than can run across arbitrary infrastructure while retaining much of the same syntax and logic.
 
