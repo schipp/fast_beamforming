@@ -42,7 +42,7 @@ Other parameters: `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`,
 
 ## Performance in scientific computing
 
-This repository is also intended as a more general guide to teach students and researchers about the potential of a) making best use of the exisiting computing libraries for significant speed-up compared to naively written Python code and b) how much performance can be gained simply by moving from `numpy` to `pytorch`. Note that `pytorch` is significantly faster in the exampel of cross-correlation beamforming example, because large matrices are involved. Further note that all linear equation systems, no matter what physics they express in your specific context, can be written in matrix form, allowing to exploit the linear algebra optimisations developed in the machine learning community for your use-case.
+This repository is also intended as a case study to teach students and researchers about the potential of a) making best use of the already exisiting computing libraries for significant speed-up compared to naively written Python code and b) how much performance can be gained simply by moving from `numpy` to equivalent `pytorch` code. Note that `pytorch` is significantly faster in the example of cross-correlation beamforming, because large tensors are involved. Further note that all linear equation systems, no matter what physics they express in your specific context, should be coded in matrix formulations, allowing to exploit the linear algebra optimisations developed in the machine learning community for your research.
 
 ## Notes on `dask`
 
