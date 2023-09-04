@@ -6,12 +6,27 @@ Cross-correlation beamforming can be realised in a few lines of matrix operation
 
 We demonstrate this with the notebooks in this repository:
 
-* `beamforming_slow.ipynb`: small synthetic example, **SLOW** naive version for teaching purposes only
-* `beamforming_pytorch.ipynb`: small synthetic example, based on `pytorch`
-* `beamforming_pytorch_field_data.ipynb`: small field data example, based on `pytorch`
-* `beamforming_dask.ipynb`: big synthetic example, based on `dask`
+* `beamforming_naive.ipynb`: small synthetic example, **SLOW** naive "pure" Python version for teaching purposes only
+* `beamforming_numpy.ipynb`: same as above, rewritten in `numpy` using broadcasting etc.
+* `beamforming_pytorch.ipynb`: same as above, replacing `numpy` functions with `pytorch` equivalents
+* [**TODO**] `beamforming_pytorch_field_data.ipynb`: small field data example, based on `pytorch` version above
+* [**TODO**] `beamforming_dask.ipynb`: big synthetic example, based on `dask`
 
-**Note on `dask`**
+In these notebooks, the logic and processing are not abstracted away in package of functions. Instead, all processing happens within the notebooks for instructional purposes.
+
+## Performance statistics
+
+These are the runtimes of the cell that performs beamforming (under 3. Beamforming) on a machine with 2x Intel Xeon Gold 6326 (16C/32T), 512 GB RAM for the parameters indicated below:
+
+| notebook version | runtime  | speed-up |
+| ---------------- | -------- | -------- |
+| naive            | 43.9 sec | 1x       |
+| numpy            | 11.7 sec | 3.75x    |
+| pytorch          | 0.9 sec  | 48.8x    |
+
+Parameters: `n_sensors = 100`, `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`, `sampling_rate = 10`, `fmin, fmax = 0.1, 1.0`
+
+## Note on `dask`
 
 `dask` allows to employ the same algorithm and largely the same syntax as the `pytorch` version, which means one doesn't have to worry about developing a different algorithm that is not memory-limited. However, `dask` also introduces a new optimisation problem: The choice of "good" chunks sizes for the specific system at hand. This is specific to the compute infrastructure used. On the bright side, this has to be optimized only once for a given problem-geometry (number of stations, grid points, frequencies). Visit the [dask documentation](https://docs.dask.org/en/stable/understanding-performance.html) for more details.
 
