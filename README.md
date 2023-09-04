@@ -106,5 +106,5 @@ A functioning installation can be achieved, e.g., via conda by
 ```bash
 >> conda create -n fast_beamforming python=3.11
 >> conda activate fast_beamforming
->> conda install torch dask scipy matplotlib notebook
+>> conda install pytorch dask scipy matplotlib notebook
 ```
