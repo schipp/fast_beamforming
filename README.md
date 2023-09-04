@@ -18,13 +18,22 @@ In these notebooks, the logic and processing are not abstracted away in package 
 
 These are the runtimes of the cell that performs beamforming (under 3. Beamforming) on a machine with 2x Intel Xeon Gold 6326 (16C/32T), 512 GB RAM for the parameters indicated below:
 
-| notebook version | runtime  | speed-up |
-| ---------------- | -------- | -------- |
-| naive            | 43.9 sec | 1x       |
-| numpy            | 11.7 sec | 3.75x    |
-| pytorch          | 0.9 sec  | 48.8x    |
+| notebook version | n_sensors | runtime  | speed-up |
+| ---------------- | --------- | -------- | -------- |
+| naive            | 100       | 43.9 sec | 1x       |
+| numpy            | 100       | 11.7 sec | 3.75x    |
+| pytorch          | 100       | 0.9 sec  | 48.8x    |
+| dask             | 100       | 1.9 sec  | 23.1x    |
 
-Parameters: `n_sensors = 100`, `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`, `sampling_rate = 10`, `fmin, fmax = 0.1, 1.0`
+| notebook version | n_sensors | runtime    | speed-up |
+| ---------------- | --------- | ---------- | -------- |
+| naive            | 1000      | 4861.3 sec | 1x       |
+| numpy            | 1000      | fail       | fail     |
+| pytorch          | 1000      | fail       | fail     |
+| dask             | 1000      | 47.0 sec   | 103.4x   |
+
+Other parameters: `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`, `sampling_rate = 10`, `fmin, fmax = 0.1, 1.0`
+
 
 ## Note on `dask`
 
