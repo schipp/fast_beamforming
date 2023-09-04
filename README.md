@@ -14,7 +14,7 @@ We demonstrate this with the notebooks in this repository:
 * `beamforming_dask.ipynb`: same as above, moving computation of $S$ and beampowers to `dask`.
 * [**TODO**] `beamforming_pytorch_field_data.ipynb`: using field data
 
-In these notebooks, the logic and processing are not abstracted away in package of functions. Instead, all processing happens within the notebooks for instructional purposes.
+In these notebooks, logic and processing is not abstracted away in a package of functions. Instead, all processing happens within the notebooks for instructional purposes.
 
 ## Performance statistics
 
