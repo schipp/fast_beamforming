@@ -11,7 +11,7 @@ We demonstrate this with the notebooks in this repository:
 * `beamforming_naive.ipynb`: naive beamforming code, **SLOW** "pure" Python version for teaching purposes only
 * `beamforming_numpy.ipynb`: same as above, rewritten in `numpy` using broadcasting etc.
 * `beamforming_pytorch.ipynb`: same as above, replacing `numpy` functions with `pytorch` equivalents
-* `beamforming_dask.ipynb`: same as above, moving computation of $S$ and beampowers to `dask`.
+* `beamforming_dask.ipynb`: same as above, moving memory-limited computations to `dask`.
 * [**TODO**] `beamforming_pytorch_field_data.ipynb`: using field data
 
 In these notebooks, logic and processing is not abstracted away in a package of functions. Instead, all processing happens within the notebooks for instructional purposes.
