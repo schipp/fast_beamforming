@@ -19,7 +19,7 @@ In these notebooks, logic and processing is not abstracted away in a package of 
 
 These are the runtimes of the cell that performs beamforming (under 3. Beamforming) on a machine with 2x Intel Xeon Gold 6326 (16C/32T), 512 GB RAM for the parameters indicated below:
 
-### `n_sources = 100`
+### `n_sensors = 100`
 
 | notebook version | runtime  | speed-up |
 | ---------------- | -------- | -------- |
@@ -28,7 +28,7 @@ These are the runtimes of the cell that performs beamforming (under 3. Beamformi
 | pytorch          | 0.9 sec  | 48.8x    |
 | dask             | 1.9 sec  | 23.1x    |
 
-### `n_sources = 1000`
+### `n_sensors = 1000`
 
 | notebook version | runtime    | speed-up |
 | ---------------- | ---------- | -------- |
