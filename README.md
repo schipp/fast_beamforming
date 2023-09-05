@@ -23,21 +23,24 @@ These are the runtimes of the cell that performs beamforming (under 3. Beamformi
 
 | notebook version | runtime  | speed-up |
 | ---------------- | -------- | -------- |
-| naive            | 43.9 sec | 1x       |
-| numpy            | 11.7 sec | 3.75x    |
-| pytorch          | 0.9 sec  | 48.8x    |
-| dask             | 1.9 sec  | 23.1x    |
+| `naive`          | 43.9 sec | 1x       |
+| `numpy`          | 11.7 sec | 3.75x    |
+| `pytorch`        | 0.9 sec  | 48.8x    |
+| `dask`           | 1.9 sec  | 23.1x    |
 
 ### `n_sensors = 1000`
 
+
 | notebook version | runtime    | speed-up |
 | ---------------- | ---------- | -------- |
-| naive            | 4861.3 sec | 1x       |
-| numpy            | fail       | fail     |
-| pytorch          | fail       | fail     |
-| dask             | 47.0 sec   | 103.4x   |
+| `naive`          | 4861.3 sec | 1x       |
+| `numpy`          | fail       | fail     |
+| `pytorch`        | fail       | fail     |
+| `dask`           | 47.0 sec   | 103.4x   |
 
-Other parameters: `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`, `sampling_rate = 10`, `fmin, fmax = 0.1, 1.0`
+`numpy` and `pytorch` versions fail, because `S` would require `2.1TiB` of memory.
+
+Other parameters in both tests: `grid_limit = 100`, `grid_spacing = 5`, `window_length = 100`, `sampling_rate = 10`, `fmin, fmax = 0.1, 1.0`
 
 ## Python performance for scientific computing
 
