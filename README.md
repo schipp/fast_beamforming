@@ -17,7 +17,9 @@ In these notebooks, logic and processing is not abstracted away in a package of 
 
 ## Performance statistics
 
-These are the runtimes of the cell that performs beamforming (under 3. Beamforming) on a machine with 2x Intel Xeon Gold 6326 (16C/32T), 512 GB RAM for the parameters indicated below:
+These are the runtimes of the cell that performs beamforming (under 3. Beamforming) on a machine with 2x Intel Xeon Gold 6326 (16C/32T), 512 GB RAM for the parameters indicated below.
+
+**Is your code faster? Let me know!**
 
 ### `n_sensors = 100`
 
