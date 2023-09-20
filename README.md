@@ -13,6 +13,10 @@ We demonstrate this with the notebooks in this repository:
 * `beamforming_pytorch.ipynb`: same as above, replacing `numpy` functions with `pytorch` equivalents
 * `beamforming_dask.ipynb`: same as above, moving memory-limited computations to `dask`.
 
+Other variants:
+
+* `beamforming_geo.ipynb`: same as the `pytorch` version, but using geographical coordinates. requires [geokernels](https://github.com/sigmaterra/geokernels) for distance calculations.
+
 In these notebooks, logic and processing is not abstracted away in a package of functions. Instead, all processing happens within the notebooks for instructional purposes.
 
 ## Performance statistics
@@ -107,6 +111,7 @@ To run these notebooks, the following is required
 * notebook
 * [torch](https://pytorch.org)
 * [dask](https://www.dask.org)
+* [geokernels](https://github.com/sigmaterra/geokernels) for distances on geographical grids
 
 A functioning installation can be achieved, e.g., via conda by
 
