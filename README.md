@@ -16,6 +16,7 @@ We demonstrate this with the notebooks in this repository:
 Other variants:
 
 * `beamforming_geo.ipynb`: same as the `pytorch` version, but using geographical coordinates. requires [geokernels](https://github.com/sigmaterra/geokernels) for distance calculations.
+* `beamforming_planewave_data.ipynb`: plane-wave beamforming of seismic field data. requires [obspy](https://docs.obspy.org) for handling seismograms.
 
 In these notebooks, logic and processing is not abstracted away in a package of functions. Instead, all processing happens within the notebooks for instructional purposes.
 
