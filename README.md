@@ -81,7 +81,7 @@ for w in range(len(omega)):
         beampowers[chunk] += np.sum((s.conj() @ K) * s, axis=1).real
 ```
 
-The first version of this repository used [dask](https://www.dask.org) for this. With the loops above, the pieces are already independent and small, and dask would only add a scheduler; it is worth it if you want to spread the pieces over several computers. What remains is $K$ itself: beyond about 20 000 sensors (6 GB per frequency) it does not fit, and its inverse and eigenvectors become very slow. Then beamform sub-arrays, or, for Bartlett and cross-correlation only, use the delay-and-sum form of the recordings, which needs no $K$ (see below).
+Earlier versions of this repository used [dask](https://www.dask.org) for this. With the loops above, the pieces are already independent and small, and dask would only add a scheduler; it is worth it if you want to spread the pieces over several computers. What remains is $K$ itself: beyond about 20 000 sensors (6 GB per frequency) it does not fit, and its inverse and eigenvectors become very slow. Then beamform sub-arrays, or, for Bartlett and cross-correlation only, use the delay-and-sum form of the recordings, which needs no $K$ (see below).
 
 ## What happened to this repository?
 
