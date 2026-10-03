@@ -1,7 +1,7 @@
 [project]
 authors = [{ name = "Sven Schippkus", email = "sven.schippkus@uni-hamburg.de" }]
 name = "fast_beamforming"
-version = "0.1.0"
+version = "3.0.0"
 description = "Fast beamforming in Python: educational notebooks, the same beamformer in several numerical libraries, and benchmarks"
 readme = "README.md"
 license-files = ["LICENSE"]

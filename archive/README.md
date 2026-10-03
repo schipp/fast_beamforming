@@ -1,6 +1,6 @@
 # Archive
 
-The notebooks of the first version of this repository (release `v1.0`), kept for reference. They are not maintained, and some no longer run with current libraries. What happened to them:
+The notebooks of the earlier versions of this repository (release `v2`), kept for reference. They are not maintained, and some no longer run with current libraries. What happened to them:
 
 | file | now |
 |---|---|

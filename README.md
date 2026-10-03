@@ -85,7 +85,7 @@ The first version of this repository used [dask](https://www.dask.org) for this.
 
 ## What happened to this repository?
 
-The first version of this repository (release [v1.0](https://github.com/schipp/fast_beamforming/releases/tag/v1.0); its notebooks are in `archive/`) wrote the beamformer as the match between two cross-spectral density matrices, $\sum K_{jk} S_{kj}$, with $S$ the matrix of the synthetics. That shows nicely that recordings and synthetics are treated alike, but $S$ has one entry per grid point, pair of sensors and frequency, and quickly fills any memory. The dask and hybrid notebooks existed to work around that. This version:
+This is version 3. The earlier versions of this repository (releases [v1](https://github.com/schipp/fast_beamforming/releases/tag/v1) and [v2](https://github.com/schipp/fast_beamforming/releases/tag/v2); the notebooks of v2 are in `archive/`) wrote the beamformer as the match between two cross-spectral density matrices, $\sum K_{jk} S_{kj}$, with $S$ the matrix of the synthetics. That shows nicely that recordings and synthetics are treated alike, but $S$ has one entry per grid point, pair of sensors and frequency, and quickly fills any memory. The dask and hybrid notebooks existed to work around that. This version:
 
 - writes the beamformer as usual, $\mathbf{s}^H K\, \mathbf{s}$, with the steering vectors $\mathbf{s}$. $S$ is never needed; neither by this nor by any other beamformer, including MVDR and MUSIC. That takes away most of the memory problem; for what remains, see "Large problems".
 - computes it with matrix products, frequency by frequency, and compares numerical libraries for exactly this computation, for four beamformers, on CPUs and GPUs (notebook 3, `benchmarks/run.py`).
@@ -163,5 +163,5 @@ notebooks/          the six notebooks; download and traveltime scripts for noteb
 implementations/    the same beamformer in different libraries
 benchmarks/         speed measurements (run.py, compare.py) and figures (plot.py); results in results/
 tests/              every implementation against the definition
-archive/            the notebooks of the first version (release v1.0)
+archive/            the notebooks of the earlier versions (release v2)
 ```
