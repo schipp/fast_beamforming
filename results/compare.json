@@ -1,0 +1,831 @@
+{
+ "hardware": {
+  "machine": "marin-ifg01",
+  "cpu_threads": 64,
+  "cpu": "Intel(R) Xeon(R) Gold 6326 CPU @ 2.90GHz",
+  "gpu": "NVIDIA A40"
+ },
+ "runs": [
+  {
+   "tool": "obspy",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.3543221624568105,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9751078713425213
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 1.920350369066,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.984825652991688
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 16.254395253956318,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9985807543672972
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 138.25427897367626,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9956708603706279
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "error": "more than 1800 s"
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 1.375959387049079,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9875481351964304
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 7.212628955021501,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9975960484703013
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 63.942428280599415,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9994370384834437
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "seconds_per_window": 549.0063971187919,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9992386498980095
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 4.545092789456248,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9969586716995691
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 27.383082640357316,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9995360843235003
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "seconds_per_window": 253.29325017053634,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999181837418388
+  },
+  {
+   "tool": "obspy",
+   "n_sensors": 300,
+   "window_samples": 16384,
+   "error": "stopped without an error message"
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.28725166618824005,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 38.888888888888886,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 1.2824886636808515,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 16.666666666666696,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 7.888334022834897,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 45.35519125683063,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 59.48118372168392,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 51.515151515151516,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "error": "stopped (exit code -9)"
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 4.7443285016343,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 16.666666666666696,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 19.014948825351894,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 24.242424242424264,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 131.56860350910574,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 56.140350877193015,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "error": "S, S.conj(), optimize=True).astype(\"complex\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/u254/sven/beamforming_code/.venv/lib/python3.12/site-packages/numpy/_core/einsumfunc.py\", line 1490, in einsum\n    new_view = c_einsum(einsum_str, *tmp_operands, **kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy._core._exceptions._ArrayMemoryError: Unable to allocate 645. GiB for an array with shape (326, 1475, 300, 300) and data type complex128"
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 87.22025962918997,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 19.047619047619023,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 288.6038483399898,
+   "backazimuth_error_deg": 0.0,
+   "slowness_error_percent": 33.3333333333333,
+   "correlation_with_pytorch": null
+  },
+  {
+   "tool": "twistpy",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "error": ", S.conj(), optimize=True).astype(\"complex\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/u254/sven/beamforming_code/.venv/lib/python3.12/site-packages/numpy/_core/einsumfunc.py\", line 1490, in einsum\n    new_view = c_einsum(einsum_str, *tmp_operands, **kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.12 TiB for an array with shape (1310, 5898, 100, 100) and data type complex128"
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.0698399031534791,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9803163456721277
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 0.1436786511912942,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9961992232161817
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 0.5225163456052542,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9995130186054284
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 3.287409372627735,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9999741778343527
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "seconds_per_window": 36.13921502418816,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9999978978802464
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 0.22319796029478312,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9847127470273488
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 0.5029608281329274,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9975329437387829
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 1.8870882280170918,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9996690182448378
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "seconds_per_window": 12.794315373525023,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9999690993403458
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 1000,
+   "window_samples": 4096,
+   "seconds_per_window": 147.92058312986046,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9999983383857821
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 0.5118707688525319,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9860220160343731
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 1.2907484993338585,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9976635972535562
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "seconds_per_window": 6.453265864402056,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.999655193959831
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 300,
+   "window_samples": 16384,
+   "seconds_per_window": 49.89555422309786,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9999715636841758
+  },
+  {
+   "tool": "acoular",
+   "n_sensors": 1000,
+   "window_samples": 16384,
+   "error": "stopped (no error message)"
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.05633521266281605,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9228750998126012
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 0.07721333019435406,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9905759362035776
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 0.1552445963025093,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9967528070399742
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 0.3485210407525301,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9992360128773651
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "seconds_per_window": 1.093840228393674,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9988948348488625
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 0.18757718335837126,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9752888481611512
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 0.25508587900549173,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9950513332146732
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 0.48706831969320774,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.998683197480545
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "seconds_per_window": 1.2013661907985806,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9997425808491559
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 1000,
+   "window_samples": 4096,
+   "seconds_per_window": 4.4115984020754695,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9997255978331961
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 0.7235311903059483,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9767405429185902
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 0.9247480733320117,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9968169750516284
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "seconds_per_window": 1.8773940093815327,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9994505957002711
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 300,
+   "window_samples": 16384,
+   "seconds_per_window": 5.591260236687958,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9997952113173043
+  },
+  {
+   "tool": "beampower",
+   "n_sensors": 1000,
+   "window_samples": 16384,
+   "seconds_per_window": 27.019497669301927,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9996957687590302
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.22062639240175486,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9000097437053053
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 0.4995803451165557,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9856074373015468
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 4.056957475841045,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9966209505316703
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 36.749709038995206,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9988557019404021
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "seconds_per_window": 501.66843906696886,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9990664998593388
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 0.2288555921986699,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9678488060608027
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 0.5755663337185979,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9948099122305467
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 4.7988617261871696,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9981993250731229
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "seconds_per_window": 43.188848537392914,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9994794732473855
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 1000,
+   "window_samples": 4096,
+   "seconds_per_window": 553.7328998381272,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9995611762099327
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 0.2699009673669934,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9687442981365473
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 0.9969053519889712,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9959841258464684
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "seconds_per_window": 7.756405868567526,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9990207084165328
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 300,
+   "window_samples": 16384,
+   "seconds_per_window": 69.10884863976389,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9994721142793317
+  },
+  {
+   "tool": "covseisnet",
+   "n_sensors": 1000,
+   "window_samples": 16384,
+   "error": "stopped (exit code -9)"
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.042382474057376385,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999999999999998
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 0.06314645614475012,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 0.3590714316815138,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 0.6255192784592509,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "seconds_per_window": 2.9322286313399673,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999999999999998
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 0.10810006689280272,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 0.20171703211963177,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 0.6179854674264789,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999999999999999
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "seconds_per_window": 1.885245168581605,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 1000,
+   "window_samples": 4096,
+   "seconds_per_window": 11.065313265658915,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999999999999999
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 0.4410926755517721,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 0.5751864602789283,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999999999999998
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "seconds_per_window": 0.9937102869153023,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 300,
+   "window_samples": 16384,
+   "seconds_per_window": 6.951728348620236,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_planewave",
+   "n_sensors": 1000,
+   "window_samples": 16384,
+   "seconds_per_window": 44.64917107950896,
+   "backazimuth_error_deg": 0.01836063115067077,
+   "slowness_error_percent": 0.05554013202424546,
+   "correlation_with_pytorch": 0.9999999999999998
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 10,
+   "window_samples": 1024,
+   "seconds_per_window": 0.036911715753376484,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 30,
+   "window_samples": 1024,
+   "seconds_per_window": 0.06537680607289076,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 100,
+   "window_samples": 1024,
+   "seconds_per_window": 0.13262358214706182,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 300,
+   "window_samples": 1024,
+   "seconds_per_window": 0.5870605763047934,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 1000,
+   "window_samples": 1024,
+   "seconds_per_window": 3.2762296879664063,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 10,
+   "window_samples": 4096,
+   "seconds_per_window": 0.15575161017477512,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 30,
+   "window_samples": 4096,
+   "seconds_per_window": 0.18838377390056849,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 100,
+   "window_samples": 4096,
+   "seconds_per_window": 0.39326770044863224,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 300,
+   "window_samples": 4096,
+   "seconds_per_window": 2.5220228089019656,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 1000,
+   "window_samples": 4096,
+   "seconds_per_window": 11.828224837779999,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 10,
+   "window_samples": 16384,
+   "seconds_per_window": 0.5471170814707875,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 0.9999999999999998
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 30,
+   "window_samples": 16384,
+   "seconds_per_window": 0.7478399397805333,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 100,
+   "window_samples": 16384,
+   "seconds_per_window": 1.4003845965489745,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 300,
+   "window_samples": 16384,
+   "seconds_per_window": 8.130769300274551,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  },
+  {
+   "tool": "pytorch_mfp",
+   "n_sensors": 1000,
+   "window_samples": 16384,
+   "seconds_per_window": 45.89675340987742,
+   "location_error_km": 0.0,
+   "correlation_with_pytorch": 1.0
+  }
+ ]
+}

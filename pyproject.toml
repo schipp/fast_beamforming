@@ -1,0 +1,47 @@
+[project]
+authors = [{ name = "Sven Schippkus", email = "sven.schippkus@uni-hamburg.de" }]
+name = "fast_beamforming"
+version = "0.1.0"
+description = "Fast beamforming in Python: educational notebooks, the same beamformer in several numerical libraries, and benchmarks"
+readme = "README.md"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "cartopy>=0.26.0",
+    "ipykernel>=6.29.5",
+    "jax>=0.6.0",
+    "matplotlib>=3.10.3",
+    "nbconvert>=7.17.1",
+    "numba>=0.61.2",
+    "obspy>=1.4.2",
+    "pytest>=9.1.1",
+    "ruff>=0.11.8",
+    "scipy>=1.15.3",
+    "torch>=2.7.0",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "cupy-cuda13x>=14.2.0",
+]
+jax = [
+    "jax[cuda12]>=0.6.0",
+]
+compare = [
+    "acoular>=25.10",
+    "beampower>=1.0.4",
+    "covseisnet>=1.0.0",
+    "spectrum>=0.10.0",
+    "twistpy",
+]
+fmm = [
+    "h5py>=3.16.0",
+    "pykonal>=0.4.1",
+]
+
+[tool.ruff]
+line-length = 110
+extend-exclude = ["archive"]
+
+[tool.uv.sources]
+twistpy = { git = "https://github.com/solldavid/TwistPy" }
